@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- hexagon shadow (offset duplicate) -->
+  <polygon points="26,106 66,36.7 146,36.7 186,106 146,175.3 66,175.3"
+           fill="none" stroke="#173a8a" stroke-width="8" stroke-linejoin="round" />
+
+  <!-- hexagon main outline -->
+  <polygon points="20,100 60,30.7 140,30.7 180,100 140,169.3 60,169.3"
+           fill="#05070b" stroke="#2563eb" stroke-width="8" stroke-linejoin="round" />
+
+  <!-- hexagon inner accent line -->
+  <polygon points="30,100 63.5,41.7 136.5,41.7 170,100 136.5,158.3 63.5,158.3"
+           fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- TTS monogram -->
+  <text x="100" y="123" font-size="62" fill="#ffffff" letter-spacing="1"
+        text-anchor="middle">TTS</text>
+
+</svg>

@@ -175,52 +175,76 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* =========================================================
-     CONTACT FORM
+   /* =========================================================
+     CONTACT FORM — WEB3FORMS
      ========================================================= */
 
   const form = document.getElementById('contactForm');
 
   if (form) {
-
     form.addEventListener('submit', async (event) => {
-
       event.preventDefault();
 
       const button = form.querySelector('[type="submit"]');
 
       if (!button || button.disabled) return;
 
+      // Let the browser handle required-field validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       const originalText = button.innerHTML;
 
+      // Loading state
       button.disabled = true;
       button.innerHTML = '<span>Sending...</span>';
 
-      /*
-       * NOTE:
-       * This currently simulates a successful submission.
-       *
-       * Replace this section later with Formspree,
-       * EmailJS, Resend, or your own backend/API.
-       */
+      try {
+        const formData = new FormData(form);
 
-      await new Promise(resolve => setTimeout(resolve, 1500));
+        const response = await fetch(
+          'https://api.web3forms.com/submit',
+          {
+            method: 'POST',
+            body: formData
+          }
+        );
 
-      button.innerHTML = '✓ Message sent!';
-      button.classList.add('success');
+        const data = await response.json();
 
-      form.reset();
+        if (data.success) {
+          // Success
+          button.innerHTML = '✓ Message sent!';
+          button.classList.add('success');
 
-      setTimeout(() => {
+          form.reset();
 
-        button.innerHTML = originalText;
-        button.classList.remove('success');
-        button.disabled = false;
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('success');
+            button.disabled = false;
+          }, 3000);
 
-      }, 3000);
+        } else {
+          throw new Error(
+            data.message || 'Something went wrong.'
+          );
+        }
+
+      } catch (error) {
+        console.error('Contact form error:', error);
+
+        button.innerHTML = 'Try again';
+
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.disabled = false;
+        }, 3000);
+      }
     });
   }
-
 
   /* =========================================================
      CURSOR GLOW — DESKTOP
