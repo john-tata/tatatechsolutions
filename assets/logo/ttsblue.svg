@@ -1,0 +1,42 @@
+<svg viewBox="0 0 580 220" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- hexagon shadow (offset duplicate) -->
+  <polygon points="23,118 70.5,35.7 165.5,35.7 213,118 165.5,200.3 70.5,200.3"
+           fill="none" stroke="#173a8a" stroke-width="9" stroke-linejoin="round" />
+
+  <!-- hexagon main outline -->
+  <polygon points="15,110 62.5,27.7 157.5,27.7 205,110 157.5,192.3 62.5,192.3"
+           fill="#05070b" stroke="#2563eb" stroke-width="9" stroke-linejoin="round" />
+
+  <!-- hexagon inner accent line -->
+  <polygon points="26,110 66,39.4 154,39.4 194,110 154,180.6 66,180.6"
+           fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- server stack icon -->
+  <g fill="#ffffff">
+    <rect x="80" y="63" width="60" height="17" rx="2.5" />
+    <circle cx="89" cy="71.5" r="2.6" fill="#05070b" />
+    <rect x="118" y="70" width="6" height="2.4" fill="#05070b" />
+    <rect x="128" y="70" width="6" height="2.4" fill="#05070b" />
+
+    <rect x="80" y="83" width="60" height="17" rx="2.5" />
+    <circle cx="89" cy="91.5" r="2.6" fill="#05070b" />
+    <rect x="118" y="90" width="6" height="2.4" fill="#05070b" />
+    <rect x="128" y="90" width="6" height="2.4" fill="#05070b" />
+
+    <rect x="80" y="103" width="60" height="17" rx="2.5" />
+    <circle cx="89" cy="111.5" r="2.6" fill="#05070b" />
+    <rect x="118" y="110" width="6" height="2.4" fill="#05070b" />
+    <rect x="128" y="110" width="6" height="2.4" fill="#05070b" />
+
+    <rect x="80" y="123" width="60" height="17" rx="2.5" />
+    <circle cx="89" cy="131.5" r="2.6" fill="#05070b" />
+    <rect x="118" y="130" width="6" height="2.4" fill="#05070b" />
+    <rect x="128" y="130" width="6" height="2.4" fill="#05070b" />
+  </g>
+
+  <!-- wordmark -->
+  <text x="248" y="100" font-size="42" fill="#ffffff" letter-spacing="1">TATATECH</text>
+  <text x="248" y="152" font-size="42" fill="#ffffff" letter-spacing="1">SOLUTIONS</text>
+
+</svg>
